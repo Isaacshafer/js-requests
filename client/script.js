@@ -2,7 +2,8 @@
 //THE TEST SERVER IS RUNNING ON LOCALHOST:3000//
 ////////////////////////////////////////////////
 
-const { default: axios } = require("axios")
+// const { default: axios } = require("axios")
+// const { query } = require("express")
 
 // const { default: axios } = require("axios")
 
@@ -135,10 +136,12 @@ repeatButton.addEventListener('click', repeatMyParam)
 
 // CODE HERE
 let queryFunc = () => {
-    axios.get(`http://localhost:3000/query-test?`)
-    .then(res => )
+    axios.get(`http://localhost:3000/query-test?name=cameron`)
+    .then(res => console.log(res.data))
 }
 
+let queryButton = document.querySelector('#query-button')
+queryButton.addEventListener('click', queryFunc)
 
 
 ////////////////
